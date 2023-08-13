@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aquachain Distributed Computing Platform - Programmable Money</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Aquachain, Programmable Money.">
+<meta name="description" content="Aquachain (AQUA) alt-ether EVM chain. No pre-mine, 1 coin mined every 4 minute block, since March 2018. Reliable smart contract platform">
+<meta property="og:description" content="Aquachain (AQUA) alt-ether EVM chain. No pre-mine, 1 coin mined every 4 minute block, since March 2018. Reliable smart contract platform">
+<meta property="og:image" content="https://info.aquacha.in/aqua_header.png">
+<meta property="og:url" content="https://info.aquacha.in/">
+<meta property="twitter:image" content="https://info.aquacha.in/aqua_header.png">
+<meta property="twitter:card" content="photo">
+<meta property="twitter:url" content="https://info.aquacha.in/">
+<meta name="robots" content="index, follow" /> 
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="keywords" content="Aquachain Distributed Computing Platform, Programmable Money, Aquachain, Ethereum, Crypto, Cryptocurrency, Smart Contract, Platform">
+
+</head>
+<body>
+<style>
+/* aquachain css style */
+/* rev 05 31 19        */
+
+body {
+background-color: #82eefb;
+background-color: #EEE;
+font-weight: bolder;
+}
+
+img {
+border: none;
+max-width: 100%;
+height: auto;
+}
+
+a {
+text-decoration: underline;
+}
+
+#container{
+margin:40px auto;
+max-width:850px;
+line-height:1.6;
+font-size:18px;
+color:#444;
+padding:0 10px;
+}
+
+h1,h2,h3{line-height:1.2}
+
+h1{ text-align: center; }
+
+</style>
+
+<!--<center>![](https://aquachain.github.io/img/a100.png)</center>-->
+
+<p><center><img src="https://info.aquacha.in/aqua_header.png" alt=""></center>
+<hr>
+<script>
+
+const aquaChainID = 61717561;
+const tokenDecimals = 18;
+const tokenImage = 'https://info.aquacha.in/latest/images/aqua-icon-200.png';
+
+async function addWrapped(){ // wrapped aqua
+  const tokenAddress = '0xc387a0577a8b15fe5b9e007f48e933e41e95b321';
+  const tokenSymbol = 'WAQUA';
+  if (window.ethereum.chainId != aquaChainID) {
+    alert("switch network to aquachain and refresh page");
+    return;
+  }
+  addToken2MM(tokenAddress, tokenSymbol, tokenDecimals, tokenImage);
+}
+
+async function addToken(){ // bep20 aqua
+  const tokenAddress = '0x38FAB266089AAf3BC2F11B791213840Ea3D587C7';
+  const tokenSymbol = 'AQUA';
+  if (window.ethereum.chainId != 56) {
+    alert("switch network to binance and refresh page");
+    return;
+  }
+  addToken2MM(tokenAddress, tokenSymbol, tokenDecimals, tokenImage);
+}
+
+async function addToken2MM(tokenAddress, tokenSymbol, tokenDecimals, tokenImage) {
+  try {
+    const wasAdded = await window.ethereum.request({
+      method: 'wallet_watchAsset',
+      params: {
+        type: 'ERC20',
+        options: {
+          address: tokenAddress, // The address that the token is at.
+          symbol: tokenSymbol, // A ticker symbol or shorthand, up to 5 chars.
+          decimals: tokenDecimals, // The number of decimals in the token
+          image: tokenImage, // A string url of the token logo
+        },
+      },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+</script>
+<div class="buttonbar" style="text-align:center;">
+  <a href='#' onClick='addToken()'><button>add bep20 aqua to metamask!</button></a>
+  <a href='#' onClick='addWrapped()'><button>add waqua to metamask!</button></a>
+  <a href='https://pancakeswap.finance/swap?outputCurrency=0x38fab266089aaf3bc2f11b791213840ea3d587c7'><button>swap bep20 aqua to and from any token</button></a>
+  <a href="https://discord.gg/55a3tu9"><button>AQUA <=> BEP20 bridge coming soon</button></a>
+</div>
+
+<hr><div id="container"></p>
+
+<h1>aquachain</h1>
+
+<p><center></p>
+
+<h2>Programmable Money</h2>
+
+<p></center></p>
+
+<p>There are more to smart contracts than simple tokens.</p>
+
+<p>Based on proof-of-work chain technology, Aquachain is a distributed computing platform secured by it's own peer to peer network. It is not a company, and there was no ICO, no pre-mine, no dev fund, no pre-sale, etc. Transactions, once mined, are irreversible and not able to be censored. Aquachain is the blockchain, AQUA is the fuel. You need AQUA to deploy and interact (write-mode) with executable distributed code contracts and to send transactions.</p>
+
+<p>Aquachain is an alt-ether, launched with no funding or pre-mine. Block number 1 was mined Sat 03 Mar 2018 12:23:29 PM UTC, and we switched proof-of-work hash function from &quot;ethash&quot; to &quot;argon2id&quot; at block 22800, (Sat 28 Apr 2018 03:46:55 AM UTC). The platform has scheduled maintenance hardforks in case changes are needed, and a hard fork constitution which prevents manipulation of the economy during these upgrades.</p>
+
+<p>AQUA is the native currency of the Aquachain system. Anyone in the world can deploy &quot;smart contracts&quot; on the Aquachain today, using AQUA as &quot;fuel&quot; in the platform. Anyone in the world may also mine their own AQUA using GPU or CPU power. The economy is inflated by 1 coin every block (target: 240 seconds). Mining rewards will cease at block 42,000,000 (forty-two million). What makes Aquachain truly unique is the combination of chain attributes. Created with a fixed supply limit, pure proof-of-work coin creation, no pre-mine, no pre-sale, no rollbacks, and many more features to love. Join our <a href="https://discord.gg/55a3tu9">discord</a> chat if you need help or have any questions or want to help.</p>
+
+<h2>Technical Basics</h2>
+
+<pre><code>Coin Name: Aquachain
+Coin Ticker/Symbol: AQUA
+Image: https://aquachain.github.io/img/a.png
+
+Reward Structure: Pure POW, 1 coin per block +uncleRewards
+Supply Limit: 42000000
+Block Timing: target 240 seconds per block
+Difficulty Recalculation: Every block
+Current POW Algorithm: argon2id
+
+Suggested Gas Price: 0.01 gwei
+Transaction Gas Amount: 21000,
+Transaction Fee: 0.00000021 AQUA
+
+EVM ChainID: 61717561 (Needed for developing wallets)
+Proof-of-work Algorithm: Aquahash (change algorithm via hard fork)
+Algorithm Version 1: Ethash
+Algorithm Version 2: Argon2id (1,1,1)
+
+</code></pre>
+
+<h2>Official links</h2>
+
+<ul>
+<li><a href="https://aquachain.github.io">Aquachain Home</a></li>
+<li><a href="https://gitlab.com/aquachain/aquachain/tree/master#aquachain">README.md</a></li>
+<li><a href="https://bitcointalk.org/index.php?topic=3138231.0">Bitcointalk ANN thread</a> (<a href="https://bitcointalk.org/index.php?topic=3138231.new#new">latest</a>)</li>
+<li><a href="https://gitlab.com/aquachain/aquachain/">Gitlab</a></li>
+<li><a href="https://github.com/aquachain/aquachain">Github</a></li>
+<li><a href="https://info.aquacha.in/latest/aquapaper.pdf">Whitepaper</a></li>
+</ul>
+
+<h2>Useful links</h2>
+
+<ul>
+	<li><a href="https://info.aquacha.in/latest/?sort=time&order=desc">Latest downloads from aerth</a></li>
+<li><a href="https://github.com/aerth/aquacppminer/tree/linux">GPU Miner Source (linux)</a></li>
+<li><a href="https://discord.gg/55a3tu9">Aquachain Discord</a></li>
+<li><a href="https://t.me/aquachain">Aquachain Telegram Announcements</a></li>
+<li><a href="https://t.me/aquacrypto">Aquachain Telegram Chat Group</a></li>
+	<li><a href="https://info.aquacha.in/market/">Aquachain Market Info</a></li>
+	<li><a href="https://coinpaprika.com/trading-view/aqua-aquachain">Aquachain Price Chart AQUA/USD</a></li>
+</ul>
+
+<ul>
+<li><a href="https://aquachain.github.io/aquapaper.html">Archived Aquapaper</a></li>
+<li><a href="/pool/">one of many AQUA mining pools</a> (<a href="https://github.com/aquachain/open-aquachain-pool/blob/master/docs/TUTORIAL.md">start a new pool!</a>)</li>
+<li>GUI WALLET: <a href="https://github.com/mycryptohq/mycrypto/releases">MyCrypto Desktop</a></li>
+<li>Android wallet: <a href="https://walleth.org/">WallETH</a></li>
+</ul>
+
+<h2>Trading / Markets / Exchanges</h2>
+
+<ul>
+<li>Trading: <a href="https://safe.trade/trading/aquabtc">SafeTrade</a> (recommended)</li>
+<li>Trading: <a href="https://asymetrex.com/markets/aquabtc">Asymetrex</a> (needs liquidity)</li>
+<li>(new) BEP20 Aquachain Token: <a href="https://charts.bogged.finance/?token=0x38fab266089aaf3bc2f11b791213840ea3d587c7">Bogged Charts</a> | <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x38fab266089aaf3bc2f11b791213840ea3d587c7">Pancake Swap</a> | <a href="https://poocoin.app/tokens/0x38fab266089aaf3bc2f11b791213840ea3d587c7">Poocoin Charts</a>
+	<li>PancakeSwap: <a href="https://pancakeswap.finance/swap?outputCurrency=0x38fab266089aaf3bc2f11b791213840ea3d587c7">PancakeSwap SWAP!</a></li>
+<!--<li>Trading: <a href="https://www.unnamed.exchange/Exchange?market=AQUA_BTC">UnnamedExchange</a></li>-->
+<li><a href="https://gitlab.com/aquachain/aquachain/wikis/Listing">Listing Details</a></li>
+</ul>
+
+<h2>Mining</h2>
+
+<ul>
+<li>Mining: <a href="https://telegra.ph/Mining-AQUA-05-27">How To (CPU guide, GPU is similar)</a></li>
+<li>Mining Calculator: <a href="https://4miners.pro/cryptocurrencies/item/537-AQUA">4Miners</a></li>
+<li>Mining Stats: <a href="https://miningpoolstats.stream/aquachain">miningpoolstats.stream</a></li>
+<li><a href="https://telegra.ph/Aquachain-AQUA---Decentralized-Processing-07-20">Resources</a></li>
+<li><a href="https://info.aquacha.in/latest/?sort=time&amp;order=desc">Download</a></li>
+<li><a href="https://github.com/monkins1010/aquacppminer/releases">GPU Miner Source</a></li>
+</ul>
+
+<h3>Downloads</h3>
+
+<ul>
+<li><a href="https://info.aquacha.in/latest/?sort=time&amp;order=desc">Full Node (aquachain) and Miner (aquacppminer)</a></li>
+<li><a href="https://info.aquacha.in/latest/?sort=time&amp;order=desc">All Downloads</a></li>
+<li><a href="https://github.com/aquachain/aquachain/releases/tag/v1.7.10">1.7.10 - With HF8 Compatibility</a></li>
+<li><a href="https://github.com/aquanetwork/aquachain/releases/">old</a></li>
+</ul>
+
+<h3>stats</h3>
+
+<ul>
+<li><a href="/status/miners">Live (all pools) Hashrate</a> (have pool? add to <a href="https://aquachain.github.io/pools.json">this</a>)</li>
+<li><a href="/status/peers">Version/Peers</a> (data gathered from only one node)</li>
+<li><a href="/status/">Status</a> (currently only block number)</li>
+<li><a href="/supply">Current Supply (in AQUA)</a> (run an <a href="https://github.com/aquanetwork/aquachain/wiki/FullNode">archive node</a> to verify)</li>
+<li><a href="/supply.wei">Current Supply (in wei)</a></li>
+<li><a href="/richlist.txt">Richlist</a> (now in AQUA console: <code>admin.richlist(10)</code>)</li>
+</ul>
+
+<h3>new</h3>
+
+<ul>
+<li><a href="https://info.aquacha.in/latest/bootstrap.dat">Bootstrap.dat</a> (regenerated hourly)</li>
+<li><a href="https://info.aquacha.in/latest/images/">Images</a></li>
+<li><a href="https://explorer.aquacha.in">Fast Explorer 1</a></li>
+<li><a href="https://explorer.aqua.omni.argonx.com">Fast Explorer 2</a></li>
+</ul>
+		<script src="https://widgets.coingecko.com/coingecko-coin-price-chart-widget.js"></script>
+<coingecko-coin-price-chart-widget  coin-id="aquachain" currency="btc" height="300" locale="en" background-color="#d4d4d4"></coingecko-coin-price-chart-widget>
+
+<a href="https://info.aquacha.in/market/">Dedicated Market Widgets Page</a>
+
+<h3>useful links</h3>
+
+<ul>
+	<!--
+<li><a href="https://github.com/monkins1010/aquacppminer/releases"><strong>New</strong> GPU Miner</a></li>
+<li><a href="https://github.com/monkins1010/aquacppminer/releases/download/v1/monkins_any.exe">Windows GPU Miner</a></li>
+	-->
+
+<!-- <li><a href="https://explorer.aqua.signal2noi.se/stats/miner_hashrate">Who mined the most recent blocks?</a></li>
+<li><a href="https://explorer.aqua.signal2noi.se/">Explorer</a></li>
+-->
+<!-- <li><a href="https://info.aquacha.in/faucet">Faucet</a> (requires a tweet with hashtag #aquachain and link to aquachain.github.io)</li>
+
+-->
+<li><a href="https://github.com/aerth/aquacppminer/tree/linux">GPU Miner Source (linux)</a></li>
+<li><a href="https://github.com/aquachain/aquachain/releases/latest">Latest Full Node - With HF8 Compatibility</a></li>
+<li><a href="https://info.aquacha.in/latest/?sort=time&amp;order=desc">Download GPU miner, CPU miner, etc</a></li>
+<li><a href="https://info.aquacha.in/latest/?sort=time&amp;order=desc">Download other binary releases</a> (or <a href="https://github.com/aquanetwork/aquachain/releases">old</a>)</li>
+<li><a href="https://gitlab.com/aquachain/aquachain/wikis/Compiling">How to compile? Where is latest code</a></li>
+<li><a href="https://twitter.com/aquacrypto">Aquachain Twitter</a></li>
+<li><a href="https://reddit.com/r/aquachain">Aquachain Subreddit</a></li>
+<li><a href="https://discord.gg/55a3tu9">Aquachain Discord</a></li>
+<li><a href="https://t.me/aquachain">Aquachain Telegram Announcements</a></li>
+<li><a href="https://t.me/aquacrypto">Aquachain Telegram Chat Group</a></li>
+</ul>
+
+<p>This site brought to you by <a href="https://github.com/aerth">aerth</a>.</p>
+<p>See <a href="https://aquachain.github.io">aquachain.github.io</a>, the 'official' page for aquachain.
+</div></p>
+
+</body>
